@@ -1017,7 +1017,7 @@ a {
   /* --- Hero: reduce dead space --- */
   .hero {
     height: auto;
-    min-height: 60vh;
+    min-height: 50vh;
     padding: 0 1.5rem;
   }
 
@@ -1083,21 +1083,29 @@ a {
   }
 
   .author-photo {
-    max-width: 250px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
+    width: 250px !important;
+    height: 250px !important;
+    aspect-ratio: unset !important;
+    border-radius: 50% !important;
+    border: 3px solid var(--accent) !important;
+    overflow: hidden;
     margin: 0 auto;
   }
 
+  .author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   /* --- Drop cap on main page bio --- */
-  .bio-text p:first-of-type::first-letter {
+  .bio-text > p:first-of-type::first-letter {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
+    font-size: 3.5em;
     float: left;
-    line-height: 1;
-    margin-right: 0.5rem;
-    margin-top: 0.05em;
+    line-height: 0.8;
+    margin-right: 0.1em;
     color: var(--accent);
     font-weight: 600;
   }
