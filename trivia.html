@@ -38,6 +38,7 @@
       border-radius: 12px;
       min-height: 600px;
       transition: height 0.2s ease;
+      background-color: #0a0a1a;
     }
   </style>
 </head>
@@ -52,7 +53,22 @@
       <li><a href="about.html">About</a></li>
       <li><a href="about.html#newsletter" class="nav-pill">Newsletter</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <div class="hamburger-lines">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
   </nav>
+
+  <!-- ======== MOBILE OVERLAY ======== -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <ul class="mobile-overlay-links">
+      <li><a href="index.html#books">Books</a></li>
+      <li><a href="trivia.html" class="active">Trivia</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="about.html#newsletter" class="mobile-overlay-newsletter">Newsletter</a>
+  </div>
 
   <!-- ======== TRIVIA ======== -->
   <section class="trivia-section">
@@ -70,8 +86,13 @@
     </div>
   </section>
 
-  <!-- ======== RESIZE LISTENER ======== -->
+  <!-- ======== SCRIPTS ======== -->
   <script>
+    // Nav background — force scrolled on trivia page
+    const nav = document.getElementById('nav');
+    nav.classList.add('scrolled');
+
+    // Resize listener for quiz iframe
     window.addEventListener('message', (e) => {
       if (e.data && e.data.type === 'quiz-embed-resize') {
         const iframe = document.getElementById('quiz-iframe');
@@ -79,6 +100,30 @@
           iframe.style.height = e.data.height + 'px';
         }
       }
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobile-overlay');
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isActive = hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeMobileMenu();
+    });
+
+    overlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
     });
   </script>
 

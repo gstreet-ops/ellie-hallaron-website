@@ -768,5 +768,331 @@ a {
   .book-flip.flipped .book-flip-inner {
     transform: rotateY(180deg);
   }
+}
 
+/* ============================================
+   COMING SOON CARD — ENHANCED PLACEHOLDER
+   ============================================ */
+.book-cover.coming-soon-enhanced {
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a1a 100%);
+  border: 1px dashed var(--accent);
+}
+
+.book-cover.coming-soon-enhanced .book-placeholder-title {
+  animation: comingSoonPulse 3s ease-in-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1.0; }
+}
+
+/* ============================================
+   ENHANCED FOOTER
+   ============================================ */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  opacity: 0.5;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  opacity: 0.8;
+}
+
+.footer-social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.footer-social-link.social-tiktok { color: #69C9D0; }
+.footer-social-link.social-instagram { color: #E1306C; }
+.footer-social-link.social-amazon { color: #FF9900; }
+.footer-social-link.social-goodreads { color: #553B08; }
+
+.footer-newsletter-link {
+  display: block;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-newsletter-link:hover {
+  color: #7d3570;
+}
+
+/* ============================================
+   ABOUT PAGE — BIO CTAs
+   ============================================ */
+.about-ctas {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 48px;
+  text-align: center;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  padding: 0.65rem 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0d0d0d;
+  background-color: #C9A84C;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.about-cta-btn:hover {
+  opacity: 0.85;
+}
+
+.about-cta-newsletter {
+  display: block;
+  margin-top: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-cta-newsletter:hover {
+  color: #7d3570;
+  text-decoration: underline;
+}
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1002;
+  position: relative;
+}
+
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger-lines span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 1px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger.active .hamburger-lines span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-lines span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 26, 0.97);
+  z-index: 1001;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.mobile-overlay.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-overlay-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-overlay-links a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobile-overlay-links a:hover,
+.mobile-overlay-links a.active {
+  color: var(--accent);
+}
+
+.mobile-overlay-newsletter {
+  display: block;
+  margin-top: 48px;
+  padding: 0.75rem 2.5rem;
+  background-color: var(--accent);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  border-radius: 4px;
+  width: calc(100% - 4rem);
+  max-width: 300px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-overlay-newsletter:hover {
+  background-color: #7d3570;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE — max-width: 768px
+   ============================================ */
+@media (max-width: 768px) {
+  /* --- Nav: show hamburger, hide desktop links --- */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+
+  /* --- Hero: reduce dead space --- */
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    padding: 0 1.5rem;
+  }
+
+  /* --- Scroll cue: animated chevron --- */
+  .scroll-cue {
+    animation: chevronBounce 1.5s ease-in-out infinite;
+  }
+
+  .scroll-cue svg {
+    stroke: var(--text-primary);
+    opacity: 0.4;
+  }
+
+  @keyframes chevronBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+
+  /* --- Reduce dead space between hero and social/connect --- */
+  .section {
+    padding: 3rem 1.25rem;
+  }
+
+  /* --- Social links: reduce gap above CONNECT, add spacing between rows --- */
+  .social-links {
+    gap: 0.75rem 1.25rem;
+    row-gap: 1rem;
+  }
+
+  /* --- Book grid: flip hint update --- */
+  .flip-hint {
+    opacity: 0.55;
+  }
+
+  /* --- About page banner --- */
+  .page-banner {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  /* --- Newsletter section spacing --- */
+  .newsletter-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* --- Books grid --- */
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* --- Bio grid stacking --- */
+  .bio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .author-photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  /* --- Trivia iframe background fix --- */
+  .trivia-section {
+    padding-top: 5rem;
+  }
+
+  .trivia-iframe-wrap iframe {
+    background-color: #0a0a1a;
+  }
 }
