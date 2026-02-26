@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia — Ellie Hallaron</title>
+  <meta name="description" content="Test your knowledge of Ellie Hallaron's dark mafia romance universe. Play the trivia quiz and compete on the leaderboard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .trivia-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .trivia-section h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .trivia-section p {
+      opacity: 0.7;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .trivia-iframe-wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .trivia-iframe-wrap iframe {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      min-height: 600px;
+      transition: height 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Ellie Hallaron</a>
+    <ul class="nav-links">
+      <li><a href="index.html#books">Books</a></li>
+      <li><a href="trivia.html">Trivia</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#newsletter" class="nav-pill">Newsletter</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======== TRIVIA ======== -->
+  <section class="trivia-section">
+    <h1>Test Your Knowledge</h1>
+    <p>How well do you know the world of The Syndicate?</p>
+
+    <div class="trivia-iframe-wrap">
+      <iframe
+        id="quiz-iframe"
+        src="https://gstreet-ops.github.io/gstreet-ops-quiz-embed/?community=ellie-hallaron&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
+        allowtransparency="true"
+        loading="lazy"
+        title="Ellie Hallaron Trivia Quiz">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ======== RESIZE LISTENER ======== -->
+  <script>
+    window.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'quiz-embed-resize') {
+        const iframe = document.getElementById('quiz-iframe');
+        if (iframe) {
+          iframe.style.height = e.data.height + 'px';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
