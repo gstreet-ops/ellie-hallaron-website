@@ -1017,7 +1017,7 @@ a {
   /* --- Hero: reduce dead space --- */
   .hero {
     height: auto;
-    min-height: 70vh;
+    min-height: 60vh;
     padding: 0 1.5rem;
   }
 
@@ -1083,8 +1083,33 @@ a {
   }
 
   .author-photo {
-    max-width: 240px;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
     margin: 0 auto;
+  }
+
+  /* --- Drop cap on main page bio --- */
+  .bio-text p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    float: left;
+    line-height: 1;
+    margin-right: 0.5rem;
+    margin-top: 0.05em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* --- Reduce gap above newsletter --- */
+  .connect-section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .newsletter-section.section {
+    padding-top: 2rem;
   }
 
   /* --- Trivia iframe background fix --- */
