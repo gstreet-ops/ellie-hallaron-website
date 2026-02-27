@@ -39,6 +39,7 @@
       min-height: 600px;
       transition: height 0.2s ease;
       background-color: #0a0a1a;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -80,6 +81,7 @@
         id="quiz-iframe"
         src="https://gstreet-ops.github.io/gstreet-ops-quiz-embed/?community=ellie-hallaron&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
         allowtransparency="true"
+        scrolling="no"
         loading="lazy"
         title="Ellie Hallaron Trivia Quiz">
       </iframe>
@@ -97,7 +99,7 @@
       if (e.data && e.data.type === 'quiz-embed-resize') {
         const iframe = document.getElementById('quiz-iframe');
         if (iframe) {
-          iframe.style.height = e.data.height + 'px';
+          iframe.style.height = (e.data.height + 16) + 'px';
         }
       }
     });
