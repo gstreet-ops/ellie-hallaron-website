@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Quiz Embed Web Component -->
+  <script src="https://cdn.jsdelivr.net/npm/@gstreet-ops/quiz-embed@0.1.0/dist/quiz-embed.js"></script>
   <style>
     .trivia-section {
       max-width: 720px;
@@ -40,6 +42,13 @@
       transition: height 0.2s ease;
       background-color: #0a0a1a;
       overflow: hidden;
+    }
+    quiz-embed {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 600px;
     }
   </style>
 </head>
@@ -77,14 +86,32 @@
     <p>How well do you know the world of The Syndicate?</p>
 
     <div class="trivia-iframe-wrap">
-      <iframe
-        id="quiz-iframe"
-        src="https://gstreet-ops.github.io/gstreet-ops-quiz-embed/?community=ellie-hallaron&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
-        allowtransparency="true"
-        scrolling="no"
-        loading="lazy"
-        title="Ellie Hallaron Trivia Quiz">
-      </iframe>
+      <!-- Primary: Web Component (no iframe, no cross-origin issues) -->
+      <quiz-embed
+        id="quiz-wc"
+        community="ellie-hallaron"
+        bg="#0D0D0D"
+        surface="#1A1A2E"
+        primary="#6B2D5E"
+        accent="#8B0000"
+        text="#F5F0EB"
+        font="Cormorant Garamond"
+        count="10"
+        difficulty="mixed"
+        leaderboard="both"
+      ></quiz-embed>
+
+      <!-- Fallback: iframe for browsers without custom element support -->
+      <noscript>
+        <iframe
+          id="quiz-iframe"
+          src="https://gstreet-ops.github.io/gstreet-ops-quiz-embed/?community=ellie-hallaron&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
+          allowtransparency="true"
+          scrolling="no"
+          loading="lazy"
+          title="Ellie Hallaron Trivia Quiz">
+        </iframe>
+      </noscript>
     </div>
   </section>
 
@@ -93,16 +120,6 @@
     // Nav background — force scrolled on trivia page
     const nav = document.getElementById('nav');
     nav.classList.add('scrolled');
-
-    // Resize listener for quiz iframe
-    window.addEventListener('message', (e) => {
-      if (e.data && e.data.type === 'quiz-embed-resize') {
-        const iframe = document.getElementById('quiz-iframe');
-        if (iframe) {
-          iframe.style.height = (e.data.height + 16) + 'px';
-        }
-      }
-    });
 
     // Hamburger menu
     const hamburger = document.getElementById('hamburger');
