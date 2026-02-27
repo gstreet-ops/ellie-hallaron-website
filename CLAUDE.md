@@ -6,8 +6,10 @@ Follow these rules for all work in this project.
 ## Cross-Project Context
 Before starting work, read the workspace Project Registry for relationship context:
 `C:\Users\brian\projects\PROJECT_REGISTRY.md`
-This project is a **consumer** of quiz-embed (loads web component via CDN).
+This project is part of the **Trivia Platform** group (Supabase Account 1).
+It is a **consumer** of quiz-embed (loads web component via CDN).
 Currently pinned to @gstreet-ops/quiz-embed@0.1.0.
+Check the registry's Pending Updates section for any version updates needed.
 
 ---
 
