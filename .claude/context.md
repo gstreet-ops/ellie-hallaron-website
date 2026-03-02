@@ -7,7 +7,7 @@
 
 - **Active branch**: main
 - **Last deployment**: Pre-redesign (original dark glamour theme still live)
-- **Design phase**: Session 1 complete — Home Page redesigned
+- **Design phase**: Session 2 complete — Books Page & Book Detail Pages
 
 ## Build Progress
 
@@ -18,7 +18,7 @@
 
 ### Build Sessions
 - [x] Session 1: Foundation & Home Page (new color system, logo hero, coming soon, bio teaser, connect section)
-- [ ] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
+- [x] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
 - [ ] Session 3: About, Shop, & Connect Pages
 - [ ] Session 4: Polish, Mobile Testing & Domain Setup
 
@@ -91,3 +91,24 @@
 - Legacy CSS preserved for about.html compatibility
 - about.html nav updated to match new structure
 - Note: Logo image file not yet in repo — hero falls back to text until file is added
+
+### 2026-03-02 — Session 2: Books Page & Individual Book Pages
+- Fixed Vengeful Vows label on index.html from "Book Three" to "Book One" (correct series order)
+- Correct series order: Book 1 Vengeful Vows (Dominic & Katerina), Book 2 Deceptive Desires (Roman & Cecilia), Book 3 Innocent Intentions (Matthias & Margot), Book 4 Angelic Acts (upcoming)
+- Updated homepage featured card links to point to individual detail pages instead of books.html
+- Added mix-blend-mode: multiply to hero logo (white bg blends into cream)
+- Updated About teaser bio to use real first paragraph from Bio for Website doc
+- Built books.html — series overview with 4-book responsive grid (4-col desktop, 2-col tablet, 2-col mobile)
+- Built 4 individual book detail pages in books/ subdirectory:
+  - books/vengeful-vows.html — full dual-POV blurb, collapsible content warning (with spoiler note), purchase buttons
+  - books/deceptive-desires.html — full dual-POV blurb, collapsible content warning, purchase buttons
+  - books/innocent-intentions.html — full dual-POV blurb, collapsible content warning, purchase buttons
+  - books/angelic-acts.html — "Blurb coming soon" placeholder, cover image, View All Books link
+- Book detail layout: sticky cover left + scrollable info right (desktop), stacked on mobile
+- Blurb formatting preserves verse-style line breaks with character name headers (h3, magenta)
+- Intro quotes styled with gold left border
+- Content warnings use native <details>/<summary> for collapsible behavior, no JS required
+- Purchase buttons: Amazon (primary magenta), Barnes & Noble + Ingram (outline) — all placeholder # URLs
+- Back-to-books arrow link on each detail page
+- New CSS sections added to styles.css: books grid, book detail, content warning, purchase links, responsive
+- All pages use consistent nav (Books active), mobile hamburger, footer, magenta/cream/gold design system

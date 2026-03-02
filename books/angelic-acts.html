@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelic Acts — The Syndicate Series | Ellie Hallaron</title>
+  <meta name="description" content="Angelic Acts by Ellie Hallaron — Book Four of The Syndicate Series. Coming soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo">Ellie Hallaron</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html" class="active">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../index.html#connect">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <div class="hamburger-lines">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </nav>
+
+  <!-- ======== MOBILE OVERLAY ======== -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <ul class="mobile-overlay-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html" class="active">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../index.html#connect" onclick="closeMobileMenu()">Connect</a></li>
+    </ul>
+    <a href="../index.html#connect" class="mobile-overlay-cta" onclick="closeMobileMenu()">Join the Inner Circle</a>
+  </div>
+
+  <!-- ======== BOOK DETAIL ======== -->
+  <section class="book-detail">
+    <div class="book-detail-inner">
+      <div class="book-cover">
+        <img src="../Angelic%20Acts%20Paperback%20Front.jpg" alt="Angelic Acts book cover">
+      </div>
+      <div class="book-info">
+        <a href="../books.html" class="back-link">
+          <svg viewBox="0 0 24 24"><polyline points="19 12 5 12"/><polyline points="12 19 5 12 12 5"/></svg>
+          All Books
+        </a>
+        <p class="section-label">The Syndicate Series</p>
+        <h1 class="book-title-main">Angelic Acts</h1>
+        <p class="book-number">Book Four &mdash; Coming Soon</p>
+
+        <p class="coming-soon-message">Blurb coming soon.</p>
+
+        <div class="purchase-links">
+          <a href="../books.html" class="purchase-btn purchase-btn-outline">View All Books</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <p>&copy; 2026 Ellie Hallaron. All rights reserved.</p>
+  </footer>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobile-overlay');
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      const isActive = hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMobileMenu(); });
+    overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+  </script>
+
+</body>
+</html>

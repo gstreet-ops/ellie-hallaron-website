@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books — Ellie Hallaron</title>
+  <meta name="description" content="The Syndicate Series by Ellie Hallaron — a four-book dark mafia romance following four dangerous brothers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Ellie Hallaron</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html" class="active">Books</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#connect">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <div class="hamburger-lines">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </nav>
+
+  <!-- ======== MOBILE OVERLAY ======== -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <ul class="mobile-overlay-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html" class="active">Books</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#connect" onclick="closeMobileMenu()">Connect</a></li>
+    </ul>
+    <a href="index.html#connect" class="mobile-overlay-cta" onclick="closeMobileMenu()">Join the Inner Circle</a>
+  </div>
+
+  <!-- ======== PAGE BANNER ======== -->
+  <section class="page-banner">
+    <h1>The Syndicate Series</h1>
+    <p>Dark. Dangerous. A little unhinged.</p>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== BOOKS GRID ======== -->
+  <section class="books-grid-section fade-in">
+    <p class="books-series-description">A four-book dark mafia romance following four dangerous brothers. Read in order.</p>
+
+    <div class="books-grid">
+      <a class="book-card" href="books/vengeful-vows.html">
+        <div class="book-card-img">
+          <img src="1.%20Vengeful%20Vows%20Cover-Recovered%20copy.jpg" alt="Vengeful Vows — Book One">
+        </div>
+        <h3 class="book-card-title">Vengeful Vows</h3>
+        <p class="book-card-sub">Book One</p>
+      </a>
+
+      <a class="book-card" href="books/deceptive-desires.html">
+        <div class="book-card-img">
+          <img src="1.%20NEW%20DISCRETE%20Deceptive%20Desires%20Discrete%20Cover.jpg" alt="Deceptive Desires — Book Two">
+        </div>
+        <h3 class="book-card-title">Deceptive Desires</h3>
+        <p class="book-card-sub">Book Two</p>
+      </a>
+
+      <a class="book-card" href="books/innocent-intentions.html">
+        <div class="book-card-img">
+          <img src="1.%20Innocent%20Intentions%20Paperback%20Pic.jpg" alt="Innocent Intentions — Book Three">
+        </div>
+        <h3 class="book-card-title">Innocent Intentions</h3>
+        <p class="book-card-sub">Book Three</p>
+      </a>
+
+      <a class="book-card" href="books/angelic-acts.html">
+        <div class="book-card-img">
+          <img src="Angelic%20Acts%20Paperback%20Front.jpg" alt="Angelic Acts — Book Four">
+        </div>
+        <h3 class="book-card-title">Angelic Acts</h3>
+        <p class="book-card-sub">Book Four &mdash; Coming Soon</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <p>&copy; 2026 Ellie Hallaron. All rights reserved.</p>
+  </footer>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobile-overlay');
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      const isActive = hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMobileMenu(); });
+    overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
