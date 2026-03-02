@@ -7,7 +7,7 @@
   <meta name="description" content="Learn more about Ellie Hallaron, dark mafia romance author of The Syndicate series. Sign up for her newsletter.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,10 +16,11 @@
   <nav class="nav" id="nav">
     <a href="index.html" class="nav-logo">Ellie Hallaron</a>
     <ul class="nav-links">
-      <li><a href="index.html#books">Books</a></li>
-      <li><a href="trivia.html">Trivia</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
       <li><a href="about.html" class="active">About</a></li>
-      <li><a href="#newsletter" class="nav-pill">Newsletter</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#connect">Connect</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <div class="hamburger-lines">
@@ -31,11 +32,13 @@
   <!-- ======== MOBILE OVERLAY ======== -->
   <div class="mobile-overlay" id="mobile-overlay">
     <ul class="mobile-overlay-links">
-      <li><a href="index.html#books">Books</a></li>
-      <li><a href="trivia.html">Trivia</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
       <li><a href="about.html" class="active">About</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html#connect" onclick="closeMobileMenu()">Connect</a></li>
     </ul>
-    <a href="#newsletter" class="mobile-overlay-newsletter" onclick="closeMobileMenu()">Newsletter</a>
+    <a href="#newsletter" class="mobile-overlay-cta" onclick="closeMobileMenu()">Join the Inner Circle</a>
   </div>
 
   <!-- ======== PAGE BANNER ======== -->

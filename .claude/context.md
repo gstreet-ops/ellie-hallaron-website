@@ -7,7 +7,7 @@
 
 - **Active branch**: main
 - **Last deployment**: Pre-redesign (original dark glamour theme still live)
-- **Design phase**: Pre-Session 1 — scope finalized, ready to build
+- **Design phase**: Session 1 complete — Home Page redesigned
 
 ## Build Progress
 
@@ -17,7 +17,7 @@
 - [x] All client assets collected and inventoried
 
 ### Build Sessions
-- [ ] Session 1: Foundation & Home Page (new color system, logo hero, coming soon, bio teaser, connect section)
+- [x] Session 1: Foundation & Home Page (new color system, logo hero, coming soon, bio teaser, connect section)
 - [ ] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
 - [ ] Session 3: About, Shop, & Connect Pages
 - [ ] Session 4: Polish, Mobile Testing & Domain Setup
@@ -77,3 +77,17 @@
 - Established new magenta/cream/gold color palette based on client's vision and Depositphotos references
 - Defined full site structure: Home, Books (with individual detail pages), About, Shop, Connect
 - Created 4-session build plan with copy-paste Claude Code prompts
+
+### 2026-03-02 — Session 1: Foundation & Home Page
+- Complete redesign of index.html and styles.css with magenta/cream/gold palette
+- Switched typography from Cormorant Garamond + Inter to Playfair Display + Lato
+- New CSS custom properties system replacing dark glamour theme
+- Built 4-section home page: logo hero, featured books, about teaser, connect
+- Nav updated to: Home | Books | About | Shop | Connect (Trivia removed from nav)
+- Mobile hamburger with deep plum full-screen overlay
+- Fade-in scroll animations via IntersectionObserver
+- Hero has onerror fallback for missing logo image (Gemini_Generated_Image_5n21vs5n21vs5n21.png)
+- Featured books: Vengeful Vows (latest release) + Angelic Acts (coming soon placeholder)
+- Legacy CSS preserved for about.html compatibility
+- about.html nav updated to match new structure
+- Note: Logo image file not yet in repo — hero falls back to text until file is added
