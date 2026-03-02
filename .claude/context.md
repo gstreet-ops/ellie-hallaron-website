@@ -6,7 +6,7 @@
 ## Current State
 
 - **Active branch**: main
-- **Last deployment**: Pre-redesign (original dark glamour theme still live)
+- **Last deployment**: Session 2 live on GitHub Pages (pushed 2026-03-02)
 - **Design phase**: Session 2 complete — Books Page & Book Detail Pages
 
 ## Build Progress
@@ -26,7 +26,7 @@
 - [ ] Book 4 (Angelic Acts) blurb — Molly writing soon
 - [ ] Professional headshots — using Pic_of_Me.jpg as placeholder
 - [ ] Purchase links (Amazon/B&N/Ingram URLs for each book)
-- [ ] Social media handles (TikTok, Instagram, Goodreads URLs)
+- [x] Social media handles — TikTok, Instagram, Amazon, Goodreads (in connect section)
 - [ ] Newsletter service provider choice
 - [ ] Signed copies shop link (when she sets up Etsy/Shopify)
 - [ ] GoDaddy DNS configuration for elliehallaron.com

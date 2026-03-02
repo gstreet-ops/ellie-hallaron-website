@@ -24,9 +24,15 @@ Includes a trivia page that loads the quiz-embed web component.
 
 ## Key Files
 - `index.html` — Homepage
+- `books.html` — Books overview (The Syndicate Series grid)
+- `books/vengeful-vows.html` — Book 1 detail (Dominic & Katerina)
+- `books/deceptive-desires.html` — Book 2 detail (Roman & Cecilia)
+- `books/innocent-intentions.html` — Book 3 detail (Matthias & Margot)
+- `books/angelic-acts.html` — Book 4 detail (coming soon)
 - `about.html` — About the author
 - `trivia.html` — Trivia quiz (web component + iframe fallback)
 - `styles.css` — Shared styles
+- `.claude/context.md` — Session-to-session project context
 
 ## Deployment
 Push to `main` → GitHub Pages auto-deploys.
