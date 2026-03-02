@@ -138,6 +138,7 @@ a {
   max-width: 420px;
   width: 70%;
   height: auto;
+  mix-blend-mode: multiply;
 }
 
 .hero-tagline {
