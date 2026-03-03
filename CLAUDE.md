@@ -29,7 +29,9 @@ Includes a trivia page that loads the quiz-embed web component.
 - `books/deceptive-desires.html` — Book 2 detail (Roman & Cecilia)
 - `books/innocent-intentions.html` — Book 3 detail (Matthias & Margot)
 - `books/angelic-acts.html` — Book 4 detail (coming soon)
-- `about.html` — About the author
+- `about.html` — About the author (full bio + quiz embed)
+- `shop.html` — Where to Buy (retailer links per book + signed copies)
+- `connect.html` — Connect page (social links, email, newsletter)
 - `trivia.html` — Trivia quiz (web component + iframe fallback)
 - `styles.css` — Shared styles
 - `.claude/context.md` — Session-to-session project context

@@ -6,8 +6,8 @@
 ## Current State
 
 - **Active branch**: main
-- **Last deployment**: Session 2 live on GitHub Pages (pushed 2026-03-02)
-- **Design phase**: Session 2 complete — Books Page & Book Detail Pages
+- **Last deployment**: Session 3 live on GitHub Pages (pushed 2026-03-03)
+- **Design phase**: Session 3 complete — About, Shop, & Connect Pages
 
 ## Build Progress
 
@@ -19,7 +19,7 @@
 ### Build Sessions
 - [x] Session 1: Foundation & Home Page (new color system, logo hero, coming soon, bio teaser, connect section)
 - [x] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
-- [ ] Session 3: About, Shop, & Connect Pages
+- [x] Session 3: About, Shop, & Connect Pages (full bio, quiz embed, shop grid, social cards, newsletter)
 - [ ] Session 4: Polish, Mobile Testing & Domain Setup
 
 ### Pending from Client
@@ -112,3 +112,22 @@
 - Back-to-books arrow link on each detail page
 - New CSS sections added to styles.css: books grid, book detail, content warning, purchase links, responsive
 - All pages use consistent nav (Books active), mobile hamburger, footer, magenta/cream/gold design system
+
+### 2026-03-03 — Session 3: About, Shop, & Connect Pages
+- Complete redesign of about.html — full 5-paragraph bio, large author photo (bio-grid layout), fade-in animations
+- Added "Test Your Knowledge" trivia section at bottom of About page with quiz embed iframe (light theme, magenta primary)
+- Quiz iframe: gstreet-ops quiz-embed with community=ellie-hallaron, lazy-loaded, styled with blush background
+- Built shop.html — "Where to Buy" page with 4 book rows (cover thumbnail + title + retailer buttons)
+- Shop layout: cover left + info right grid, Amazon (primary magenta), B&N + Ingram (outline buttons) — all placeholder # URLs
+- Angelic Acts shop entry shows "Coming Soon" with note about purchase links at release
+- "Signed Copies" section with blush background, "Coming Soon" message, "Get Notified" CTA linking to connect page
+- Built connect.html — dedicated Connect page with 3 sections: social links, email contact, newsletter
+- Social links: 4-card grid (TikTok, Instagram, Goodreads, Amazon) with gold-bordered circle icons, handles shown
+- Email contact section: placeholder contact@elliehallaron.com with envelope icon
+- Newsletter: reuses "Join the Inner Circle" pattern from homepage (deep plum background, subscribe form)
+- Updated nav links across ALL 8 pages to point to connect.html instead of #connect / index.html#connect
+- Root pages: href="connect.html", Book detail pages: href="../connect.html"
+- Mobile overlay CTA updated to point to connect.html on all pages
+- Removed "legacy" comments from CSS (no longer legacy — Session 3 is complete)
+- New CSS sections: quiz embed, shop page, connect page (social cards, email contact), responsive breakpoints for all
+- All new pages use consistent nav, mobile hamburger, footer, fade-in scroll animations, magenta/cream/gold design system
