@@ -6,8 +6,8 @@
 ## Current State
 
 - **Active branch**: main
-- **Last deployment**: Session 3 live on GitHub Pages (pushed 2026-03-03)
-- **Design phase**: Session 3 complete — About, Shop, & Connect Pages
+- **Last deployment**: Session 4 live on GitHub Pages (pushed 2026-03-03)
+- **Design phase**: Session 4 complete — Polish and Fixes
 
 ## Build Progress
 
@@ -20,7 +20,7 @@
 - [x] Session 1: Foundation & Home Page (new color system, logo hero, coming soon, bio teaser, connect section)
 - [x] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
 - [x] Session 3: About, Shop, & Connect Pages (full bio, quiz embed, shop grid, social cards, newsletter)
-- [ ] Session 4: Polish, Mobile Testing & Domain Setup
+- [x] Session 4: Polish, Mobile Testing & Fixes
 
 ### Pending from Client
 - [ ] Book 4 (Angelic Acts) blurb — Molly writing soon
@@ -131,3 +131,13 @@
 - Removed "legacy" comments from CSS (no longer legacy — Session 3 is complete)
 - New CSS sections: quiz embed, shop page, connect page (social cards, email contact), responsive breakpoints for all
 - All new pages use consistent nav, mobile hamburger, footer, fade-in scroll animations, magenta/cream/gold design system
+
+### 2026-03-03 — Session 4: Polish and Fixes
+- Replaced all 5 bio paragraphs in about.html with exact verbatim text from Bio_for_Website.docx
+- Verified quiz embed iframe URL is correct (literal & characters, #/? hash route, correct community/theme params)
+- Full cross-page nav audit: all 10 pages (5 root + 4 books/* + trivia.html) checked
+- Fixed trivia.html nav: updated from old structure (Books/Trivia/About/Newsletter) to current (Home/Books/About/Shop/Connect)
+- Fixed trivia.html: updated font from Cormorant Garamond to Playfair Display, added footer, added mobile overlay CTA
+- Added overflow-x: hidden to body in styles.css to prevent horizontal scroll on mobile
+- Mobile verified: hamburger scripts on all pages, img { max-width: 100% } global rule, quiz iframe height 500px on mobile
+- Nav link map verified: root pages use direct filenames, books/* pages use ../ prefix, all consistent
