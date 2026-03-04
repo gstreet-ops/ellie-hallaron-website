@@ -8,7 +8,7 @@ Before starting work, read the workspace Project Registry for relationship conte
 `C:\Users\brian\projects\PROJECT_REGISTRY.md`
 This project is part of the **Trivia Platform** group (Supabase Account 1).
 It is a **consumer** of quiz-embed (loads web component via CDN).
-Currently pinned to @gstreet-ops/quiz-embed@0.1.0.
+Currently pinned to @gstreet-ops/quiz-embed@latest.
 Check the registry's Pending Updates section for any version updates needed.
 
 ---
@@ -21,7 +21,7 @@ Hosted on GitHub Pages. Includes a trivia page that loads the quiz-embed web com
 - Eleventy 3.x (static site generator)
 - Nunjucks templates
 - GitHub Pages (via GitHub Actions)
-- Quiz embed: @gstreet-ops/quiz-embed@0.1.0 via jsDelivr CDN
+- Quiz embed: @gstreet-ops/quiz-embed@latest via jsDelivr CDN
 
 ## Key Files
 - `.eleventy.js` — Eleventy config (input: src, output: _site, pathPrefix)
