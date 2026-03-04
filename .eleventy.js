@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
     return str.replace(/\n/g, "<br>");
   });
 
+  // URL-encode a string for query parameters
+  eleventyConfig.addFilter("urlencode", (str) => encodeURIComponent(String(str || "")));
+
   return {
     dir: {
       input: "src",

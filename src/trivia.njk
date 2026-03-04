@@ -39,7 +39,7 @@ permalink: /trivia/
       border-radius: 12px;
       min-height: 600px;
       transition: height 0.2s ease;
-      background-color: #0a0a1a;
+      background-color: {{ quiz.theme.bg }};
       overflow: hidden;
     }
     quiz-embed {
@@ -60,33 +60,34 @@ permalink: /trivia/
   <!-- ======== TRIVIA ======== -->
   <section class="trivia-section">
     <h1>{{ quiz.heading }}</h1>
-    <p>How well do you know the world of The Syndicate?</p>
+    <p>{{ quiz.description | safe }}</p>
 
     <div class="trivia-iframe-wrap">
       <!-- Primary: Web Component (no iframe, no cross-origin issues) -->
       <quiz-embed
         id="quiz-wc"
         community="{{ quiz.community }}"
-        bg="#0D0D0D"
-        surface="#1A1A2E"
-        primary="#6B2D5E"
-        accent="#8B0000"
-        text="#F5F0EB"
-        font="Cormorant Garamond"
-        count="10"
-        difficulty="mixed"
-        leaderboard="both"
+        bg="{{ quiz.theme.bg }}"
+        surface="{{ quiz.theme.surface }}"
+        primary="{{ quiz.theme.primary }}"
+        accent="{{ quiz.theme.accent }}"
+        text="{{ quiz.theme.text }}"
+        font="{{ quiz.theme.font }}"
+        count="{{ quiz.behavior.count }}"
+        difficulty="{{ quiz.behavior.difficulty }}"
+        timer="{{ quiz.behavior.timer }}"
+        category="{{ quiz.behavior.category }}"
       ></quiz-embed>
 
       <!-- Fallback: iframe for browsers without custom element support -->
       <noscript>
         <iframe
           id="quiz-iframe"
-          src="{{ quiz.embed_base_url }}?community={{ quiz.community }}&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
+          src="{{ quiz.embed_base_url }}?community={{ quiz.community }}&bg={{ quiz.theme.bg | urlencode }}&surface={{ quiz.theme.surface | urlencode }}&primary={{ quiz.theme.primary | urlencode }}&accent={{ quiz.theme.accent | urlencode }}&text={{ quiz.theme.text | urlencode }}&font={{ quiz.theme.font | urlencode }}&count={{ quiz.behavior.count }}&difficulty={{ quiz.behavior.difficulty }}&timer={{ quiz.behavior.timer }}&category={{ quiz.behavior.category }}"
           allowtransparency="true"
           scrolling="no"
           loading="lazy"
-          title="{{ quiz.title }}">
+          title="{{ quiz.heading }}">
         </iframe>
       </noscript>
     </div>
