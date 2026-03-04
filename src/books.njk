@@ -1,0 +1,39 @@
+---
+pageKey: books
+permalink: /books/
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ pagesMeta.books.title }}{% endblock %}
+{% block pageDescription %}{{ pagesMeta.books.meta_description }}{% endblock %}
+
+{% block content %}
+  <!-- ======== PAGE BANNER ======== -->
+  <section class="page-banner">
+    <h1>{{ pagesMeta.books.banner_heading }}</h1>
+    <p>{{ pagesMeta.books.banner_sub }}</p>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== BOOKS GRID ======== -->
+  <section class="books-grid-section fade-in">
+    <p class="books-series-description">{{ series[0].description }}</p>
+
+    <div class="books-grid">
+      {%- for book in books %}
+      <a class="book-card" href="{{ ('/books/' + book.slug + '/') | url }}">
+        <div class="book-card-img">
+          <img src="{{ book.cover | url }}" alt="{{ book.title }} — {{ book.number }}">
+        </div>
+        <h3 class="book-card-title">{{ book.title }}</h3>
+        <p class="book-card-sub">{{ book.number }}{% if book.status == "coming_soon" %} &mdash; Coming Soon{% endif %}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+{% endblock %}

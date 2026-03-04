@@ -1,0 +1,88 @@
+---
+pageKey: connect
+permalink: /connect/
+mobileCtaHref: "#newsletter"
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ pagesMeta.connect.title }}{% endblock %}
+{% block pageDescription %}{{ pagesMeta.connect.meta_description }}{% endblock %}
+
+{% block content %}
+  <!-- ======== PAGE BANNER ======== -->
+  <section class="page-banner">
+    <h1>{{ pagesMeta.connect.banner_heading }}</h1>
+    <p>{{ pagesMeta.connect.banner_sub }}</p>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== SOCIAL LINKS ======== -->
+  <section class="connect-social-section fade-in">
+    <div class="connect-social-inner">
+      <p class="section-label">Follow Along</p>
+      <h2 class="section-heading">Find Me Online</h2>
+      <p class="connect-social-description">Stay up to date with book news, behind-the-scenes content, and the occasional unhinged author moment.</p>
+
+      <div class="connect-social-grid">
+        {%- for platform in social %}
+        <a href="{{ platform.url }}" target="_blank" rel="noopener" class="connect-social-card">
+          <div class="connect-social-icon">
+            <svg viewBox="0 0 24 24"><path d="{{ platform.svg_path }}"/></svg>
+          </div>
+          <span class="connect-social-name">{{ platform.name }}</span>
+          <span class="connect-social-handle">{{ platform.handle }}</span>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== EMAIL CONTACT ======== -->
+  <section class="connect-email-section fade-in">
+    <div class="connect-email-inner">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-heading">Contact</h2>
+      <p class="connect-email-description">For inquiries about collaborations, press, or just to say hello:</p>
+      <a href="mailto:{{ site.contact_email }}" class="connect-email-link">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        {{ site.contact_email }}
+      </a>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== NEWSLETTER ======== -->
+  <section class="connect-section" id="newsletter">
+    <div class="connect-inner">
+      <p class="section-label">{{ newsletter.label }}</p>
+      <h2 class="section-heading">{{ newsletter.heading }}</h2>
+      <p class="connect-description">{{ newsletter.description }}</p>
+
+      <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-note">{{ newsletter.note }}</p>
+      <p id="subscribe-msg" style="display:none;"></p>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extraScripts %}
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const msg = document.getElementById('subscribe-msg');
+      msg.textContent = 'Thank you for subscribing!';
+      msg.style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+{% endblock %}

@@ -6,8 +6,8 @@
 ## Current State
 
 - **Active branch**: main
-- **Last deployment**: Session 4 live on GitHub Pages (pushed 2026-03-03)
-- **Design phase**: Session 4 complete — Polish and Fixes
+- **Last deployment**: Session 5 — Eleventy conversion (pending push)
+- **Design phase**: Session 5 complete — Eleventy Migration
 
 ## Build Progress
 
@@ -21,6 +21,7 @@
 - [x] Session 2: Books Page & Individual Book Pages (series grid, 4 detail pages)
 - [x] Session 3: About, Shop, & Connect Pages (full bio, quiz embed, shop grid, social cards, newsletter)
 - [x] Session 4: Polish, Mobile Testing & Fixes
+- [x] Session 5: Eleventy Migration (data-driven templates, GitHub Actions)
 
 ### Pending from Client
 - [ ] Book 4 (Angelic Acts) blurb — Molly writing soon
@@ -50,16 +51,20 @@
 
 ## Asset Inventory
 
-### Images in repo
+### Images (organized in src/images/)
 | File | Purpose |
 |------|---------|
-| Gemini_Generated_Image_gzolr9gzolr9gzol.png | Logo (white bg) |
-| Gemini_Generated_Image_5n21vs5n21vs5n21.png | Logo (transparent) |
-| Pic_of_Me.jpg | Author photo (placeholder) |
-| 1__Vengeful_Vows_CoverRecovered_copy.jpg | Book 1 cover |
-| 1__NEW_DISCRETE_Deceptive_Desires_Discrete_Cover.jpg | Book 2 cover |
-| 1__Innocent_Intentions_Paperback_Pic.jpg | Book 3 cover |
-| Angelic_Acts_Paperback_Front.jpg | Book 4 cover |
+| src/images/logo/logo-white-bg.png | Logo (white bg) |
+| src/images/logo/logo-transparent.png | Logo (transparent) |
+| src/images/author/author-photo.jpg | Author photo (placeholder) |
+| src/images/covers/vengeful-vows.jpg | Book 1 cover |
+| src/images/covers/deceptive-desires.jpg | Book 2 cover |
+| src/images/covers/innocent-intentions.jpg | Book 3 cover |
+| src/images/covers/angelic-acts.jpg | Book 4 cover |
+
+### Legacy images (root dir, still in repo)
+| File | Purpose |
+|------|---------|
 | Depositphotos_666139340_XL.jpg | Color reference (magenta watercolor) |
 | Depositphotos_14083733_XL.jpg | Color reference (renders black) |
 
@@ -141,3 +146,32 @@
 - Added overflow-x: hidden to body in styles.css to prevent horizontal scroll on mobile
 - Mobile verified: hamburger scripts on all pages, img { max-width: 100% } global rule, quiz iframe height 500px on mobile
 - Nav link map verified: root pages use direct filenames, books/* pages use ../ prefix, all consistent
+
+### 2026-03-03 — Session 5: Eleventy Migration
+- Converted entire site from static HTML to Eleventy (11ty) static site generator
+- Initialized npm project, installed @11ty/eleventy@3.1.2
+- Created src/ directory structure: _data/, _includes/layouts/, images/ (covers, logo, author)
+- Renamed and organized all images from root into semantic subdirectories
+- Extracted all content from 10 HTML pages into separate JSON data files in src/_data/:
+  - site.json, nav.json, hero.json, bio.json, books.json, series.json, social.json, quiz.json, newsletter.json, pagesMeta.json
+  - Originally content.json but split to avoid Eleventy's reserved `content` variable in layouts
+- Created base.njk layout with Nunjucks extends pattern (not Eleventy layout chaining)
+  - Shared nav loop, mobile overlay, footer, scripts (nav scroll, hamburger, fade-in observer)
+  - Block overrides: pageTitle, pageDescription, extraHead, navScript, content, extraScripts
+  - pageKey front matter variable drives active nav state
+  - mobileCtaHref variable for connect page's #newsletter anchor
+- Created 7 Nunjucks page templates:
+  - index.njk — homepage with hero, featured books (filtered by book.featured), about teaser, newsletter
+  - books.njk — series grid loop over all books
+  - book-detail.njk — pagination over books array generates 4 individual book pages
+  - about.njk — bio paragraphs loop, quiz embed iframe
+  - shop.njk — shop rows loop with coming_soon conditional
+  - connect.njk — social cards loop, email contact, newsletter
+  - trivia.njk — quiz web component with extraHead styles and forced scrolled nav
+- Book blurbs use nl2br custom filter to convert \n to <br> for verse-style poetry formatting
+- All URLs use Eleventy's url filter with pathPrefix: /ellie-hallaron-website/
+- Created .eleventy.js config: input src, output _site, passthrough copy for images/styles/admin
+- Created .github/workflows/build.yml: GitHub Actions build + deploy to Pages
+- Build output: 10 HTML pages + 8 passthrough files (images + CSS)
+- Updated .gitignore: _site/, node_modules/, .cache/
+- Old static HTML files remain in repo root (can be removed after verifying deployment)

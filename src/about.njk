@@ -1,0 +1,64 @@
+---
+pageKey: about
+permalink: /about/
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ pagesMeta.about.title }}{% endblock %}
+{% block pageDescription %}{{ pagesMeta.about.meta_description }}{% endblock %}
+
+{% block content %}
+  <!-- ======== PAGE BANNER ======== -->
+  <section class="page-banner">
+    <h1>{{ pagesMeta.about.banner_heading }}</h1>
+    <p>{{ pagesMeta.about.banner_sub }}</p>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== BIO SECTION ======== -->
+  <section class="section fade-in">
+    <div class="bio-grid">
+      <div class="author-photo">
+        <img src="{{ bio.photo | url }}" alt="{{ bio.photo_alt }}">
+      </div>
+      <div class="bio-text">
+        {%- for paragraph in bio.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div class="about-ctas">
+      <a href="{{ '/books/' | url }}" class="about-cta-btn">Read the Books &rsaquo;</a>
+      <a href="{{ '/connect/' | url }}" class="about-cta-newsletter">Join the Newsletter</a>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== TRIVIA / QUIZ ======== -->
+  <section class="quiz-section fade-in">
+    <div class="quiz-inner">
+      <p class="section-label">Bonus</p>
+      <h2 class="section-heading">{{ quiz.heading }}</h2>
+      <p class="quiz-description">{{ quiz.description | safe }}</p>
+      <div class="quiz-embed-wrapper">
+        <iframe
+          src="{{ quiz.embed_base_url }}?community={{ quiz.community }}&bg=%23FFF8F0&surface=%23FFFFFF&primary=%23C2185B&text=%232D2D2D&accent=%23C5A55A"
+          width="100%"
+          height="600"
+          frameborder="0"
+          style="border-radius:12px;"
+          title="{{ quiz.title }}"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+{% endblock %}

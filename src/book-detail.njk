@@ -1,0 +1,75 @@
+---
+pagination:
+  data: books
+  size: 1
+  alias: book
+permalink: /books/{{ book.slug }}/
+pageKey: books
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ book.title }} — {{ book.series }} | {{ site.title }}{% endblock %}
+{% block pageDescription %}{{ book.meta_description }}{% endblock %}
+
+{% block content %}
+  <!-- ======== BOOK DETAIL ======== -->
+  <section class="book-detail">
+    <div class="book-detail-inner">
+      <div class="book-cover">
+        <img src="{{ book.cover | url }}" alt="{{ book.cover_alt }}">
+      </div>
+      <div class="book-info">
+        <a href="{{ '/books/' | url }}" class="back-link">
+          <svg viewBox="0 0 24 24"><polyline points="19 12 5 12"/><polyline points="12 19 5 12 12 5"/></svg>
+          All Books
+        </a>
+        <p class="section-label">{{ book.series }}</p>
+        <h1 class="book-title-main">{{ book.title }}</h1>
+        {%- if book.couple %}
+        <p class="book-number">{{ book.number }} &mdash; {{ book.couple }}</p>
+        {%- else %}
+        <p class="book-number">{{ book.number }}</p>
+        {%- endif %}
+
+        {%- if book.status == "coming_soon" %}
+        <div class="book-blurb">
+          <p>Blurb coming soon.</p>
+        </div>
+        {%- else %}
+        <div class="book-blurb">
+          <p class="book-blurb-intro">{{ book.blurb_intro }}</p>
+
+          {%- for pov in book.blurb_pov %}
+          <h3>{{ pov.character }}</h3>
+          {%- for verse in pov.verses %}
+          <p>{{ verse | nl2br | safe }}</p>
+          {%- endfor %}
+          {%- endfor %}
+        </div>
+
+        {%- if book.content_warning %}
+        <details class="content-warning">
+          <summary>{{ book.content_warning.label }}</summary>
+          <div class="content-warning-body">
+            {%- for paragraph in book.content_warning.paragraphs %}
+            <p>{{ paragraph }}</p>
+            {%- endfor %}
+          </div>
+        </details>
+        {%- endif %}
+
+        {%- if book.purchase_links.length > 0 %}
+        <div class="purchase-links">
+          {%- for link in book.purchase_links %}
+          <a href="{{ link.url }}" class="purchase-btn purchase-btn-{{ link.style }}">{{ link.label }}</a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+{% endblock %}

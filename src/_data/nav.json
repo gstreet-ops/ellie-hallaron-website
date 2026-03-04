@@ -1,0 +1,7 @@
+[
+  { "label": "Home", "url": "/", "key": "home" },
+  { "label": "Books", "url": "/books/", "key": "books" },
+  { "label": "About", "url": "/about/", "key": "about" },
+  { "label": "Shop", "url": "/shop/", "key": "shop" },
+  { "label": "Connect", "url": "/connect/", "key": "connect" }
+]

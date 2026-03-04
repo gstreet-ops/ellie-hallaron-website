@@ -1,0 +1,67 @@
+---
+pageKey: shop
+permalink: /shop/
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ pagesMeta.shop.title }}{% endblock %}
+{% block pageDescription %}{{ pagesMeta.shop.meta_description }}{% endblock %}
+
+{% block content %}
+  <!-- ======== PAGE BANNER ======== -->
+  <section class="page-banner">
+    <h1>{{ pagesMeta.shop.banner_heading }}</h1>
+    <p>{{ pagesMeta.shop.banner_sub }}</p>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== SHOP GRID ======== -->
+  <section class="shop-section fade-in">
+    {%- for book in books %}
+    <div class="shop-book-row">
+      <div class="shop-book-cover">
+        <a href="{{ ('/books/' + book.slug + '/') | url }}">
+          <img src="{{ book.cover | url }}" alt="{{ book.title }} cover">
+        </a>
+      </div>
+      <div class="shop-book-info">
+        <p class="section-label">{{ book.number }}</p>
+        <h2 class="shop-book-title">{{ book.title }}</h2>
+        {%- if book.status == "coming_soon" %}
+        <p class="shop-book-sub">Coming Soon</p>
+        <p class="shop-coming-soon-note">Purchase links available at release.</p>
+        {%- else %}
+        <p class="shop-book-sub">{{ book.couple }}</p>
+        <div class="shop-retailers">
+          {%- for link in book.purchase_links %}
+          <a href="{{ link.url }}" class="purchase-btn purchase-btn-{{ link.style }}">{{ link.label }}</a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+    {%- if not loop.last %}
+
+    <div class="gold-divider-wide"></div>
+    {%- endif %}
+    {%- endfor %}
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== SIGNED COPIES ======== -->
+  <section class="signed-section fade-in">
+    <div class="signed-inner">
+      <p class="section-label">Special Editions</p>
+      <h2 class="section-heading">Signed Copies</h2>
+      <p class="signed-description">Signed and personalized copies of <em>{{ series[0].name }}</em> are coming soon. Stay tuned for availability.</p>
+      <a href="{{ '/connect/' | url }}" class="view-all-btn">Get Notified</a>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+{% endblock %}

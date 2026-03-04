@@ -1,0 +1,18 @@
+{
+  "title": "Ellie Hallaron",
+  "tagline": "Romance Author",
+  "description": "Ellie Hallaron writes emotionally charged romance. Her debut series, The Syndicate, is a four-book dark mafia romance following four dangerous brothers.",
+  "url": "https://gstreet-ops.github.io/ellie-hallaron-website",
+  "contact_email": "contact@elliehallaron.com",
+  "copyright_year": "2026",
+  "fonts_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap",
+  "palette": {
+    "magenta": "#C2185B",
+    "cream": "#FFF8F0",
+    "gold": "#C5A55A",
+    "charcoal": "#2D2D2D",
+    "deep_plum": "#3D1A2E",
+    "blush": "#F5E6EC",
+    "white": "#FFFFFF"
+  }
+}

@@ -1,0 +1,94 @@
+---
+pageKey: trivia
+permalink: /trivia/
+---
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ pagesMeta.trivia.title }}{% endblock %}
+{% block pageDescription %}{{ pagesMeta.trivia.meta_description }}{% endblock %}
+
+{% block extraHead %}
+  <!-- Quiz Embed Web Component -->
+  <script src="https://cdn.jsdelivr.net/npm/@gstreet-ops/quiz-embed@0.1.0/dist/quiz-embed.js"></script>
+  <style>
+    .trivia-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .trivia-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .trivia-section p {
+      opacity: 0.7;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .trivia-iframe-wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .trivia-iframe-wrap iframe {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      min-height: 600px;
+      transition: height 0.2s ease;
+      background-color: #0a0a1a;
+      overflow: hidden;
+    }
+    quiz-embed {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 600px;
+    }
+  </style>
+{% endblock %}
+
+{% block navScript %}
+    nav.classList.add('scrolled');
+{% endblock %}
+
+{% block content %}
+  <!-- ======== TRIVIA ======== -->
+  <section class="trivia-section">
+    <h1>{{ quiz.heading }}</h1>
+    <p>How well do you know the world of The Syndicate?</p>
+
+    <div class="trivia-iframe-wrap">
+      <!-- Primary: Web Component (no iframe, no cross-origin issues) -->
+      <quiz-embed
+        id="quiz-wc"
+        community="{{ quiz.community }}"
+        bg="#0D0D0D"
+        surface="#1A1A2E"
+        primary="#6B2D5E"
+        accent="#8B0000"
+        text="#F5F0EB"
+        font="Cormorant Garamond"
+        count="10"
+        difficulty="mixed"
+        leaderboard="both"
+      ></quiz-embed>
+
+      <!-- Fallback: iframe for browsers without custom element support -->
+      <noscript>
+        <iframe
+          id="quiz-iframe"
+          src="{{ quiz.embed_base_url }}?community={{ quiz.community }}&bg=%230D0D0D&surface=%231A1A2E&primary=%236B2D5E&accent=%238B0000&text=%23F5F0EB&font=Cormorant+Garamond&count=10&difficulty=mixed&leaderboard=both"
+          allowtransparency="true"
+          scrolling="no"
+          loading="lazy"
+          title="{{ quiz.title }}">
+        </iframe>
+      </noscript>
+    </div>
+  </section>
+{% endblock %}

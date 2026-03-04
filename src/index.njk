@@ -1,0 +1,108 @@
+---
+pageKey: home
+permalink: /
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <!-- ======== HERO ======== -->
+  <section class="hero">
+    <img
+      src="{{ hero.logo | url }}"
+      alt="{{ hero.logo_alt }}"
+      class="hero-logo"
+    >
+    <p class="hero-tagline">{{ hero.tagline }}</p>
+    <div class="scroll-cue">
+      <svg viewBox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide" style="margin: 0 auto;"></div>
+
+  <!-- ======== FEATURED BOOKS ======== -->
+  <section class="featured-books fade-in">
+    <p class="section-label">{{ series[0].name }}</p>
+    <h2 class="section-heading">{{ series[0].tagline }}</h2>
+    <p class="featured-subtitle">{{ series[0].description }}</p>
+
+    <div class="featured-grid">
+      {%- for book in books %}
+      {%- if book.featured %}
+      <a class="featured-card" href="{{ ('/books/' + book.slug + '/') | url }}">
+        <div class="featured-card-img">
+          <img src="{{ book.cover | url }}" alt="{{ book.title }} — {{ book.number }}">
+        </div>
+        <h3 class="featured-card-title">{{ book.title }}</h3>
+        <p class="featured-card-sub">{{ book.featured_sub }}</p>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+
+    <a href="{{ '/books/' | url }}" class="view-all-btn">View All Books</a>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== ABOUT TEASER ======== -->
+  <section class="about-teaser fade-in">
+    <div class="about-teaser-inner">
+      <div class="about-teaser-photo">
+        <img src="{{ bio.photo | url }}" alt="{{ bio.photo_alt }}">
+      </div>
+      <div class="about-teaser-text">
+        <p class="section-label">About the Author</p>
+        <h2 class="section-heading">Meet Ellie</h2>
+        <p class="about-teaser-bio">{{ bio.teaser }}</p>
+        <a href="{{ '/about/' | url }}" class="read-more-link">
+          Read More
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== GOLD DIVIDER ======== -->
+  <div class="gold-divider-wide"></div>
+
+  <!-- ======== CONNECT ======== -->
+  <section class="connect-section fade-in" id="connect">
+    <div class="connect-inner">
+      <p class="section-label">{{ newsletter.label }}</p>
+      <h2 class="section-heading">{{ newsletter.heading }}</h2>
+      <p class="connect-description">{{ newsletter.description }}</p>
+
+      <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-note">{{ newsletter.note }}</p>
+      <p id="subscribe-msg" style="display:none;"></p>
+
+      <div class="social-icons">
+        {%- for platform in social %}
+        <a href="{{ platform.url }}" target="_blank" rel="noopener" class="social-icon-link" aria-label="{{ platform.name }}">
+          <svg viewBox="0 0 24 24"><path d="{{ platform.svg_path }}"/></svg>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block extraScripts %}
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const msg = document.getElementById('subscribe-msg');
+      msg.textContent = 'Thank you for subscribing!';
+      msg.style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+{% endblock %}

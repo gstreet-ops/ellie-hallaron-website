@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block pageTitle %}{{ site.title }} — {{ site.tagline }}{% endblock %}</title>
+  <meta name="description" content="{% block pageDescription %}{{ site.description }}{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{ site.fonts_url }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+  {% block extraHead %}{% endblock %}
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav" id="nav">
+    <a href="{{ '/' | url }}" class="nav-logo">{{ site.title }}</a>
+    <ul class="nav-links">
+      {%- for item in nav %}
+      <li><a href="{{ item.url | url }}"{% if item.key == pageKey %} class="active"{% endif %}>{{ item.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <div class="hamburger-lines">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </nav>
+
+  <!-- ======== MOBILE OVERLAY ======== -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <ul class="mobile-overlay-links">
+      {%- for item in nav %}
+      <li><a href="{{ item.url | url }}"{% if item.key == pageKey %} class="active"{% endif %}{% if loop.last %} onclick="closeMobileMenu()"{% endif %}>{{ item.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <a href="{{ mobileCtaHref or ('/connect/' | url) }}" class="mobile-overlay-cta" onclick="closeMobileMenu()">{{ newsletter.cta_label }}</a>
+  </div>
+
+  {% block content %}{% endblock %}
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <p>&copy; {{ site.copyright_year }} {{ site.title }}. All rights reserved.</p>
+  </footer>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script>
+    // Nav background on scroll
+    const nav = document.getElementById('nav');
+    {% block navScript %}
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    {% endblock %}
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobile-overlay');
+    function closeMobileMenu() {
+      hamburger.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+      const isActive = hamburger.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMobileMenu(); });
+    overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+  {% block extraScripts %}{% endblock %}
+
+</body>
+</html>
