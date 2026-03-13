@@ -12,7 +12,9 @@ mobileCtaHref: "#newsletter"
   <!-- ======== PAGE BANNER ======== -->
   <section class="page-banner">
     <h1>{{ pagesMeta.connect.banner_heading }}</h1>
+    {%- if pagesMeta.connect.banner_sub %}
     <p>{{ pagesMeta.connect.banner_sub }}</p>
+    {%- endif %}
   </section>
 
   <!-- ======== GOLD DIVIDER ======== -->
@@ -21,10 +23,6 @@ mobileCtaHref: "#newsletter"
   <!-- ======== SOCIAL LINKS ======== -->
   <section class="connect-social-section fade-in">
     <div class="connect-social-inner">
-      <p class="section-label">Follow Along</p>
-      <h2 class="section-heading">Find Me Online</h2>
-      <p class="connect-social-description">Stay up to date with book news, behind-the-scenes content, and the occasional unhinged author moment.</p>
-
       <div class="connect-social-grid">
         {%- for platform in social %}
         <a href="{{ platform.url }}" target="_blank" rel="noopener" class="connect-social-card">
@@ -45,9 +43,9 @@ mobileCtaHref: "#newsletter"
   <!-- ======== EMAIL CONTACT ======== -->
   <section class="connect-email-section fade-in">
     <div class="connect-email-inner">
-      <p class="section-label">Get in Touch</p>
       <h2 class="section-heading">Contact</h2>
       <p class="connect-email-description">For inquiries about collaborations, press, or just to say hello:</p>
+      <!-- TODO: Get correct email from Molly -->
       <a href="mailto:{{ site.contact_email }}" class="connect-email-link">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         {{ site.contact_email }}
@@ -61,7 +59,6 @@ mobileCtaHref: "#newsletter"
   <!-- ======== NEWSLETTER ======== -->
   <section class="connect-section" id="newsletter">
     <div class="connect-inner">
-      <p class="section-label">{{ newsletter.label }}</p>
       <h2 class="section-heading">{{ newsletter.heading }}</h2>
       <p class="connect-description">{{ newsletter.description }}</p>
 

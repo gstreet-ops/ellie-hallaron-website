@@ -7,12 +7,20 @@ permalink: /
 {% block content %}
   <!-- ======== HERO ======== -->
   <section class="hero">
+    {%- if hero.watercolor %}
+    <img
+      src="{{ hero.watercolor | url }}"
+      alt="{{ hero.logo_alt }} — Romance Author"
+      class="hero-watercolor"
+    >
+    {%- else %}
     <img
       src="{{ hero.logo | url }}"
       alt="{{ hero.logo_alt }}"
       class="hero-logo"
     >
     <p class="hero-tagline">{{ hero.tagline }}</p>
+    {%- endif %}
     <div class="scroll-cue">
       <svg viewBox="0 0 24 24">
         <polyline points="6 9 12 15 18 9"></polyline>
@@ -25,21 +33,16 @@ permalink: /
 
   <!-- ======== FEATURED BOOKS ======== -->
   <section class="featured-books fade-in">
-    <p class="section-label">{{ series[0].name }}</p>
-    <h2 class="section-heading">{{ series[0].tagline }}</h2>
-    <p class="featured-subtitle">{{ series[0].description }}</p>
-
     <div class="featured-grid">
       {%- for book in books %}
-      {%- if book.featured %}
       <a class="featured-card" href="{{ ('/books/' + book.slug + '/') | url }}">
+        <span class="featured-card-label">{% if book.status == "coming_soon" %}Coming Soon{% else %}New Release{% endif %}</span>
         <div class="featured-card-img">
           <img src="{{ book.cover | url }}" alt="{{ book.title }} — {{ book.number }}">
         </div>
         <h3 class="featured-card-title">{{ book.title }}</h3>
         <p class="featured-card-sub">{{ book.featured_sub }}</p>
       </a>
-      {%- endif %}
       {%- endfor %}
     </div>
 
@@ -73,7 +76,9 @@ permalink: /
   <!-- ======== CONNECT ======== -->
   <section class="connect-section fade-in" id="connect">
     <div class="connect-inner">
+      {%- if newsletter.label %}
       <p class="section-label">{{ newsletter.label }}</p>
+      {%- endif %}
       <h2 class="section-heading">{{ newsletter.heading }}</h2>
       <p class="connect-description">{{ newsletter.description }}</p>
 

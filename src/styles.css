@@ -72,12 +72,20 @@ a {
 }
 
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--deep-plum);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: 0.04em;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.nav.scrolled .nav-logo-img {
+  height: 34px;
 }
 
 .nav-links {
@@ -140,6 +148,13 @@ a {
   width: 70%;
   height: auto;
   mix-blend-mode: multiply;
+}
+
+.hero-watercolor {
+  max-width: 550px;
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .hero-tagline {
@@ -245,10 +260,22 @@ a {
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  max-width: 700px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem;
+  max-width: 1000px;
   margin: 0 auto 3rem;
+}
+
+.featured-card-label {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--magenta);
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .featured-card {
@@ -755,8 +782,9 @@ a {
   }
 
   .featured-grid {
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 560px;
+    max-width: 900px;
   }
 }
 
@@ -794,13 +822,19 @@ a {
     margin-top: 1.5rem;
   }
 
+  .hero-watercolor {
+    max-width: 350px;
+    width: 80%;
+  }
+
   /* Featured Books */
   .featured-books {
     padding: 4rem 1.25rem;
   }
 
   .featured-grid {
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .featured-card-title {
@@ -873,8 +907,9 @@ a {
   }
 
   .featured-grid {
-    grid-template-columns: 1fr;
-    max-width: 280px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1209,6 +1244,14 @@ a {
   padding: 6rem 2rem;
   text-align: center;
   background-color: var(--cream);
+}
+
+.books-series-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--deep-plum);
+  margin-bottom: 0.75rem;
 }
 
 .books-series-description {

@@ -1,43 +1,43 @@
 [
   {
-    "slug": "vengeful-vows",
-    "title": "Vengeful Vows",
+    "slug": "innocent-intentions",
+    "title": "Innocent Intentions",
     "series": "The Syndicate Series",
     "number": "Book One",
-    "couple": "Dominic & Katerina",
-    "cover": "/images/covers/vengeful-vows.jpg",
-    "cover_alt": "Vengeful Vows book cover",
+    "couple": "Matthias & Margot",
+    "cover": "/images/covers/innocent-intentions.jpg",
+    "cover_alt": "Innocent Intentions book cover",
     "status": "published",
     "featured": true,
-    "featured_sub": "Book One \u2014 Out Now",
-    "meta_description": "Vengeful Vows by Ellie Hallaron \u2014 Book One of The Syndicate Series. A dark mafia romance of arranged marriage, reluctant vows, and enemies bound by matrimony.",
-    "blurb_intro": "I\u2019d do anything to escape my current life, but an arranged marriage to the enemy might be more than I can handle. And Dominic Montclair is proving to be a different kind of trouble.",
+    "featured_sub": "Book One — Out Now",
+    "meta_description": "Innocent Intentions by Ellie Hallaron — Book One of The Syndicate Series. A dark romance of captive turned choice, where a good deed leads to a dangerous obsession.",
+    "blurb_intro": "He made me miss my coffee run when he murdered those two men in an alley. Now he brings it to me in bed every morning. So… that's where I'm at.",
     "blurb_pov": [
       {
-        "character": "Katerina",
+        "character": "Margot",
         "verses": [
-          "All my life, I\u2019ve been the Bratva Princess.\nOrdered around, micromanaged, and controlled.\nA doll to sit still and look pretty.",
-          "When I\u2019m forced to marry the Syndicate boss,\nI don\u2019t know what to think.\nIs this my chance for freedom,\nOr is it out of the frying pan and into the fire?",
-          "Dominic Montclair is cold, calloused, and downright disapproving of me.\nHis gazes are laced with disdain and disappointment.\nI don\u2019t meet his standards, and he doesn\u2019t give me a second chance.\nWhen I finally blow up and try to slap some sense into him\u2014\nHe smiles.",
-          "He promises me freedom,\nBut when I fight back, he revokes it.\nNot because he\u2019s controlling me,\nBut because he wants me.\nWhich wasn\u2019t part of our arrangement."
+          "I was just trying to be helpful. A hot stranger left his credit card behind at the café.\nI followed him outside to return it. To do a good deed.\nI didn't mean to overhear his phone call.\nI definitely didn't mean to hear phrases like <em>cut out his tongue</em> and <em>shoot on sight</em>.\nAnd I absolutely didn't mean to witness a double homicide.\nWhich, to be fair, could've arguably been self-defense.",
+          "Now, I'm in his house. Wearing his clothes. Sleeping in his bed.\nEating dinner with him every night like a married couple.",
+          "And don't even get me started on his ridiculous claim:\nHe says I'm his.\nThat I belong to him.\nHe calls it <em>our</em> bed and <em>our</em> home.\nHe's a psychopathic killer hiding behind custom suits.",
+          "I should be afraid. I should be trying to escape.\nBut with every heated gaze and tempting touch—\nIt's starting to feel less like captive and more like choice.\nAnd that terrifies me more than he ever could."
         ]
       },
       {
-        "character": "Dominic",
+        "character": "Matthias",
         "verses": [
-          "To save my Syndicate, I make the ultimate sacrifice.\nI marry the enemy\u2019s daughter.\nThe porcelain doll is the last thing I want in a wife.\nShe\u2019s quiet, submissive, and boring.\nThe Bratva Princess won\u2019t survive this life.",
-          "I promise her freedom and distance.\nI want nothing to do with the pretty doll\u2014\nUntil she raises a hand towards me.",
-          "When my tiger starts spitting fire after we wed,\nI have to adjust my plan.\nI mean after all, a wife should sleep beside her husband.\nShe may instigate fights, rebel, and occasionally stab me,\nBut what\u2019s a wife for if not to keep her husband on his toes.",
-          "This marriage may have started as an alliance,\nBut it\u2019s become something else entirely.\nWatch me transform the Bratva Princess into the Syndicate Queen."
+          "She followed me. I didn't even know. She walked straight into my world,\ntripping over a dumpster trying to get away, begging for her freedom.\nGod, I love when she begs.",
+          "Really, it's her fault I took her.\nWhat was I supposed to do? Let her go?\nShe saw too much. I didn't have a choice.",
+          "Now she's in my house.\nInfiltrating every room.\nFilling it with her laughter, her mess, her sass,\nand her ridiculously named lazy, oversized excuse for a guard dog.\nThey've moved in like they belong here.\nAnd somehow… they're consuming my mind.",
+          "She doesn't know it yet.\nBut she was mine the second those big, beautiful eyes locked with mine\nas she swore her innocent intentions.\nI won't let her go.\nBecause I keep what's mine."
         ]
       }
     ],
     "content_warning": {
-      "label": "Content Warning \u2014 Contains Spoilers",
+      "label": "Content Warning",
       "paragraphs": [
-        "This is a dark romance intended for mature audiences. It contains themes some readers may find triggering, including abuse from a parent, a mother\u2019s suicide (in the past and off page but briefly discussed), patricide, forced marriage, and violence. The heroine\u2019s story begins in a bad place for her, but she quickly becomes a strong and fierce woman. The hero begins the story disgusted with the idea of marriage, specifically towards the heroine, but quickly has a change of heart. They never planned on marriage, they never wanted it, but it\u2019s what they never knew they needed.",
-        "This is not a sane romance, but it is a satisfying one.",
-        "If you crave reluctant vows made under duress, the push and pull of enemies joined through matrimony, and a wife putting her husband in his place\u2014 Let me introduce you to Mr. and Mrs. Dominic Montclair."
+        "This is a dark romance intended for mature audiences. It contains themes that some readers may find triggering, including kidnapping, murder, violence, attempted sexual assault, and blurred lines between protection and possession. The heroine runs her mouth, refuses to behave, and has no idea how to back down, even when she's losing. The morally gray anti-hero never planned for love but will burn the world to keep hers.",
+        "This is not a safe romance, but it is a satisfying one.",
+        "If you like luxury you never asked for, desire you never expected, and intimacy you can't stop craving— Let me introduce you to Matthias Montclair."
       ]
     },
     "purchase_links": [
@@ -55,33 +55,34 @@
     "cover": "/images/covers/deceptive-desires.jpg",
     "cover_alt": "Deceptive Desires book cover",
     "status": "published",
-    "featured": false,
-    "meta_description": "Deceptive Desires by Ellie Hallaron \u2014 Book Two of The Syndicate Series. A dark romance of hidden identities, dangerous love, and a monster who'd do anything for his sunshine.",
-    "blurb_intro": "I try to make every day a great day, until suddenly, he\u2019s the one making them great. My hero is everything I could ever want. But what do I do when I find out I\u2019ve been falling in love with a lie?",
+    "featured": true,
+    "featured_sub": "Book Two — Out Now",
+    "meta_description": "Deceptive Desires by Ellie Hallaron — Book Two of The Syndicate Series. A dark romance of hidden identities, dangerous love, and a monster who'd do anything for his sunshine.",
+    "blurb_intro": "I try to make every day a great day, until suddenly, he's the one making them great. My hero is everything I could ever want. But what do I do when I find out I've been falling in love with a lie?",
     "blurb_pov": [
       {
         "character": "Cecilia",
         "verses": [
-          "My days pass in a blur.\nYoga, work, and friends occupy my time.\nI don\u2019t have any complaints though.\nThere isn\u2019t anything I\u2019d change.\nNot until I literally fall into the arms of my hero,\nAnd he shows me all that I\u2019ve been missing.",
-          "Roman\u2019s sweet, gentle, and kindhearted.\nHe cares for me and loves me in a fairytale way.\nThere\u2019s a reason I call him \u201ch\u00e9roe.\u201d\nHe\u2019s saved me countless times,\nAnd I\u2019ve never been happier.",
-          "But I\u2019m warned against him.\nMy best friend calls him a God of Darkness,\nAnd passersby shrink at the sight of him.\nI just don\u2019t see it.\nI know I can be blinded by my optimism,\nBut how can someone who treats me so well be anything but sincere?"
+          "My days pass in a blur.\nYoga, work, and friends occupy my time.\nI don't have any complaints though.\nThere isn't anything I'd change.\nNot until I literally fall into the arms of my hero,\nAnd he shows me all that I've been missing.",
+          "Roman's sweet, gentle, and kindhearted.\nHe cares for me and loves me in a fairytale way.\nThere's a reason I call him \u201chéroe.\u201d\nHe's saved me countless times,\nAnd I've never been happier.",
+          "But I'm warned against him.\nMy best friend calls him a God of Darkness,\nAnd passersby shrink at the sight of him.\nI just don't see it.\nI know I can be blinded by my optimism,\nBut how can someone who treats me so well be anything but sincere?"
         ]
       },
       {
         "character": "Roman",
         "verses": [
-          "I love my life.\nThere\u2019s nothing I want to change.\nAs the enforcer for the Syndicate, I spend my days inflicting pain.\nMy anger fuels me,\nAnd I bask in the ruthless reputation I\u2019ve earned.\nI\u2019m the monster the other monsters fear,\nAnd I fucking love it.\nUntil an innocent goddess tumbles into my arms.",
-          "Suddenly, my life is turned upside down.\nI\u2019m having to hide who I am and what I do,\nBecause I won\u2019t change me,\nBut I also can\u2019t let her see beneath the mask.\nMy sweet sunshine is too pure for my life,\nAnd despite it being in her best interest,\nI can\u2019t seem to stay away.",
-          "The more I\u2019m around her, the more I learn about her\u2014\nThe more I know she\u2019s mine.\nAnd I\u2019ll do anything to keep her.\nEven if that means deceiving her.\nNo one, not even she, can keep me away,\nAnd if it comes to it, she won\u2019t have a choice."
+          "I love my life.\nThere's nothing I want to change.\nAs the enforcer for the Syndicate, I spend my days inflicting pain.\nMy anger fuels me,\nAnd I bask in the ruthless reputation I've earned.\nI'm the monster the other monsters fear,\nAnd I fucking love it.\nUntil an innocent goddess tumbles into my arms.",
+          "Suddenly, my life is turned upside down.\nI'm having to hide who I am and what I do,\nBecause I won't change me,\nBut I also can't let her see beneath the mask.\nMy sweet sunshine is too pure for my life,\nAnd despite it being in her best interest,\nI can't seem to stay away.",
+          "The more I'm around her, the more I learn about her—\nThe more I know she's mine.\nAnd I'll do anything to keep her.\nEven if that means deceiving her.\nNo one, not even she, can keep me away,\nAnd if it comes to it, she won't have a choice."
         ]
       }
     ],
     "content_warning": {
       "label": "Content Warning",
       "paragraphs": [
-        "This is a dark romance intended for mature audiences. It contains themes that some readers may find triggering, including stalking, robbery, drugging, murder, torture, violence, and manipulation. The heroine is a sweet, kindhearted woman who has zero red flags\u2014 Now her h\u00e9roe, known as the \u201cMonster Montclair\u201d to others, is a walking red flag. He\u2019s dark, dangerous, and deranged, but never to her. He never planned on love, but now that he has his sunshine, he\u2019ll never let her go.",
+        "This is a dark romance intended for mature audiences. It contains themes that some readers may find triggering, including stalking, robbery, drugging, murder, torture, violence, and manipulation. The heroine is a sweet, kindhearted woman who has zero red flags— Now her héroe, known as the \u201cMonster Montclair\u201d to others, is a walking red flag. He's dark, dangerous, and deranged, but never to her. He never planned on love, but now that he has his sunshine, he'll never let her go.",
         "This is not a safe romance, but it is a satisfying one.",
-        "If you crave love you never saw coming, desire you never expected, and passion you\u2019ll feel through the pages\u2014 Let me introduce you to Roman Francis Montclair."
+        "If you crave love you never saw coming, desire you never expected, and passion you'll feel through the pages— Let me introduce you to Roman Francis Montclair."
       ]
     },
     "purchase_links": [
@@ -91,43 +92,44 @@
     ]
   },
   {
-    "slug": "innocent-intentions",
-    "title": "Innocent Intentions",
+    "slug": "vengeful-vows",
+    "title": "Vengeful Vows",
     "series": "The Syndicate Series",
     "number": "Book Three",
-    "couple": "Matthias & Margot",
-    "cover": "/images/covers/innocent-intentions.jpg",
-    "cover_alt": "Innocent Intentions book cover",
+    "couple": "Dominic & Katerina",
+    "cover": "/images/covers/vengeful-vows.jpg",
+    "cover_alt": "Vengeful Vows book cover",
     "status": "published",
-    "featured": false,
-    "meta_description": "Innocent Intentions by Ellie Hallaron \u2014 Book Three of The Syndicate Series. A dark romance of captive turned choice, where a good deed leads to a dangerous obsession.",
-    "blurb_intro": "He made me miss my coffee run when he murdered those two men in an alley. Now he brings it to me in bed every morning. So\u2026 that\u2019s where I\u2019m at.",
+    "featured": true,
+    "featured_sub": "Book Three — Out Now",
+    "meta_description": "Vengeful Vows by Ellie Hallaron — Book Three of The Syndicate Series. A dark mafia romance of arranged marriage, reluctant vows, and enemies bound by matrimony.",
+    "blurb_intro": "I'd do anything to escape my current life, but an arranged marriage to the enemy might be more than I can handle. And Dominic Montclair is proving to be a different kind of trouble.",
     "blurb_pov": [
       {
-        "character": "Margot",
+        "character": "Katerina",
         "verses": [
-          "I was just trying to be helpful. A hot stranger left his credit card behind at the caf\u00e9.\nI followed him outside to return it. To do a good deed.\nI didn\u2019t mean to overhear his phone call.\nI definitely didn\u2019t mean to hear phrases like <em>cut out his tongue</em> and <em>shoot on sight</em>.\nAnd I absolutely didn\u2019t mean to witness a double homicide.\nWhich, to be fair, could\u2019ve arguably been self-defense.",
-          "Now, I\u2019m in his house. Wearing his clothes. Sleeping in his bed.\nEating dinner with him every night like a married couple.",
-          "And don\u2019t even get me started on his ridiculous claim:\nHe says I\u2019m his.\nThat I belong to him.\nHe calls it <em>our</em> bed and <em>our</em> home.\nHe\u2019s a psychopathic killer hiding behind custom suits.",
-          "I should be afraid. I should be trying to escape.\nBut with every heated gaze and tempting touch\u2014\nIt\u2019s starting to feel less like captive and more like choice.\nAnd that terrifies me more than he ever could."
+          "All my life, I've been the Bratva Princess.\nOrdered around, micromanaged, and controlled.\nA doll to sit still and look pretty.",
+          "When I'm forced to marry the Syndicate boss,\nI don't know what to think.\nIs this my chance for freedom,\nOr is it out of the frying pan and into the fire?",
+          "Dominic Montclair is cold, calloused, and downright disapproving of me.\nHis gazes are laced with disdain and disappointment.\nI don't meet his standards, and he doesn't give me a second chance.\nWhen I finally blow up and try to slap some sense into him—\nHe smiles.",
+          "He promises me freedom,\nBut when I fight back, he revokes it.\nNot because he's controlling me,\nBut because he wants me.\nWhich wasn't part of our arrangement."
         ]
       },
       {
-        "character": "Matthias",
+        "character": "Dominic",
         "verses": [
-          "She followed me. I didn\u2019t even know. She walked straight into my world,\ntripping over a dumpster trying to get away, begging for her freedom.\nGod, I love when she begs.",
-          "Really, it\u2019s her fault I took her.\nWhat was I supposed to do? Let her go?\nShe saw too much. I didn\u2019t have a choice.",
-          "Now she\u2019s in my house.\nInfiltrating every room.\nFilling it with her laughter, her mess, her sass,\nand her ridiculously named lazy, oversized excuse for a guard dog.\nThey\u2019ve moved in like they belong here.\nAnd somehow\u2026 they\u2019re consuming my mind.",
-          "She doesn\u2019t know it yet.\nBut she was mine the second those big, beautiful eyes locked with mine\nas she swore her innocent intentions.\nI won\u2019t let her go.\nBecause I keep what\u2019s mine."
+          "To save my Syndicate, I make the ultimate sacrifice.\nI marry the enemy's daughter.\nThe porcelain doll is the last thing I want in a wife.\nShe's quiet, submissive, and boring.\nThe Bratva Princess won't survive this life.",
+          "I promise her freedom and distance.\nI want nothing to do with the pretty doll—\nUntil she raises a hand towards me.",
+          "When my tiger starts spitting fire after we wed,\nI have to adjust my plan.\nI mean after all, a wife should sleep beside her husband.\nShe may instigate fights, rebel, and occasionally stab me,\nBut what's a wife for if not to keep her husband on his toes.",
+          "This marriage may have started as an alliance,\nBut it's become something else entirely.\nWatch me transform the Bratva Princess into the Syndicate Queen."
         ]
       }
     ],
     "content_warning": {
-      "label": "Content Warning",
+      "label": "Content Warning — Contains Spoilers",
       "paragraphs": [
-        "This is a dark romance intended for mature audiences. It contains themes that some readers may find triggering, including kidnapping, murder, violence, attempted sexual assault, and blurred lines between protection and possession. The heroine runs her mouth, refuses to behave, and has no idea how to back down, even when she\u2019s losing. The morally gray anti-hero never planned for love but will burn the world to keep hers.",
-        "This is not a safe romance, but it is a satisfying one.",
-        "If you like luxury you never asked for, desire you never expected, and intimacy you can\u2019t stop craving\u2014 Let me introduce you to Matthias Montclair."
+        "This is a dark romance intended for mature audiences. It contains themes some readers may find triggering, including abuse from a parent, a mother's suicide (in the past and off page but briefly discussed), patricide, forced marriage, and violence. The heroine's story begins in a bad place for her, but she quickly becomes a strong and fierce woman. The hero begins the story disgusted with the idea of marriage, specifically towards the heroine, but quickly has a change of heart. They never planned on marriage, they never wanted it, but it's what they never knew they needed.",
+        "This is not a sane romance, but it is a satisfying one.",
+        "If you crave reluctant vows made under duress, the push and pull of enemies joined through matrimony, and a wife putting her husband in his place— Let me introduce you to Mr. and Mrs. Dominic Montclair."
       ]
     },
     "purchase_links": [
@@ -146,8 +148,8 @@
     "cover_alt": "Angelic Acts book cover",
     "status": "coming_soon",
     "featured": true,
-    "featured_sub": "Book Four \u2014 Coming Soon",
-    "meta_description": "Angelic Acts by Ellie Hallaron \u2014 Book Four of The Syndicate Series. Coming soon.",
+    "featured_sub": "Book Four — Coming Soon",
+    "meta_description": "Angelic Acts by Ellie Hallaron — Book Four of The Syndicate Series. Coming soon.",
     "blurb_intro": "",
     "blurb_pov": [],
     "content_warning": null,
