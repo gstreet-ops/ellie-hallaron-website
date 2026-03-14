@@ -27,14 +27,19 @@
 
 ### Pending from Client
 - [ ] Book 4 (Angelic Acts) blurb — Molly writing soon
-- [ ] Professional headshots — using Pic_of_Me.jpg as placeholder
+- [ ] GoDaddy DNS activation for elliehallaron.com (then change pathPrefix to "/")
 - [ ] Purchase links (Amazon/B&N/Ingram URLs for each book) — currently all "#"
 - [ ] Newsletter service provider choice
 - [ ] Signed copies shop link
-- [ ] GoDaddy DNS configuration for elliehallaron.com
-- [ ] Correct contact email — currently placeholder (email@placeholder.com), TODO: get from Molly
-- [ ] Correct Amazon Author Page URL — currently placeholder
-- [ ] Watercolor logo image (Logo.jpg) — not provided yet, hero still uses logo-white-bg.png
+- [ ] Professional headshots — using Pic_of_Me.jpg as placeholder
+
+### Resolved (Client Feedback Round 1 & 2)
+- [x] Contact email — set to elliehallaron.author@gmail.com
+- [x] Amazon Author Page URL — set to correct URL
+- [x] Watercolor logo image — added to hero
+- [x] Book order corrected (II, DD, VV, AA)
+- [x] Per-book labels (data-driven "label" field in books.json)
+- [x] Social media handles confirmed
 
 ## Design Decisions
 

@@ -36,7 +36,11 @@ permalink: /
     <div class="featured-grid">
       {%- for book in books %}
       <a class="featured-card" href="{{ ('/books/' + book.slug + '/') | url }}">
-        <span class="featured-card-label">{% if book.status == "coming_soon" %}Coming Soon{% else %}New Release{% endif %}</span>
+        {%- if book.label %}
+        <span class="featured-card-label">{{ book.label }}</span>
+        {%- else %}
+        <span class="featured-card-label">&nbsp;</span>
+        {%- endif %}
         <div class="featured-card-img">
           <img src="{{ book.cover | url }}" alt="{{ book.title }} — {{ book.number }}">
         </div>

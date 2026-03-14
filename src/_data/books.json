@@ -10,6 +10,7 @@
     "status": "published",
     "featured": true,
     "featured_sub": "Book One — Out Now",
+    "label": "",
     "meta_description": "Innocent Intentions by Ellie Hallaron — Book One of The Syndicate Series. A dark romance of captive turned choice, where a good deed leads to a dangerous obsession.",
     "blurb_intro": "He made me miss my coffee run when he murdered those two men in an alley. Now he brings it to me in bed every morning. So… that's where I'm at.",
     "blurb_pov": [
@@ -57,6 +58,7 @@
     "status": "published",
     "featured": true,
     "featured_sub": "Book Two — Out Now",
+    "label": "",
     "meta_description": "Deceptive Desires by Ellie Hallaron — Book Two of The Syndicate Series. A dark romance of hidden identities, dangerous love, and a monster who'd do anything for his sunshine.",
     "blurb_intro": "I try to make every day a great day, until suddenly, he's the one making them great. My hero is everything I could ever want. But what do I do when I find out I've been falling in love with a lie?",
     "blurb_pov": [
@@ -102,6 +104,7 @@
     "status": "published",
     "featured": true,
     "featured_sub": "Book Three — Out Now",
+    "label": "New Release",
     "meta_description": "Vengeful Vows by Ellie Hallaron — Book Three of The Syndicate Series. A dark mafia romance of arranged marriage, reluctant vows, and enemies bound by matrimony.",
     "blurb_intro": "I'd do anything to escape my current life, but an arranged marriage to the enemy might be more than I can handle. And Dominic Montclair is proving to be a different kind of trouble.",
     "blurb_pov": [
@@ -149,6 +152,7 @@
     "status": "coming_soon",
     "featured": true,
     "featured_sub": "Book Four — Coming Soon",
+    "label": "Coming Soon",
     "meta_description": "Angelic Acts by Ellie Hallaron — Book Four of The Syndicate Series. Coming soon.",
     "blurb_intro": "",
     "blurb_pov": [],
