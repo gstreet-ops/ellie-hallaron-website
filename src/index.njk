@@ -34,7 +34,7 @@ permalink: /
   <!-- ======== FEATURED BOOKS ======== -->
   <section class="featured-books fade-in">
     <div class="featured-grid">
-      {%- for book in books %}
+      {%- for book in books | selectattr("show_on_home") %}
       <a class="featured-card" href="{{ ('/books/' + book.slug + '/') | url }}">
         {%- if book.label %}
         <span class="featured-card-label">{{ book.label }}</span>

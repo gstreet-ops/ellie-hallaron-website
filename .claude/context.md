@@ -6,8 +6,8 @@
 ## Current State
 
 - **Active branch**: main
-- **Last deployment**: Session 6 — Client Feedback Round 1
-- **Design phase**: Session 6 complete — Client feedback implemented
+- **Last deployment**: Session 7 — Client Feedback Round 2
+- **Design phase**: Session 7 complete — Client feedback round 2 implemented
 
 ## Build Progress
 
@@ -24,14 +24,16 @@
 - [x] Session 4: Polish, Mobile Testing & Fixes
 - [x] Session 5: Eleventy Migration
 - [x] Session 6: Client Feedback Round 1
+- [x] Session 7: Client Feedback Round 2
 
 ### Pending from Client
 - [ ] Book 4 (Angelic Acts) blurb — Molly writing soon
 - [ ] GoDaddy DNS activation for elliehallaron.com (then change pathPrefix to "/")
-- [ ] Purchase links (Amazon/B&N/Ingram URLs for each book) — currently all "#"
+- [ ] Purchase links (Amazon/B&N/Ingram URLs for each book) — currently all "#", waiting on URLs from Molly
 - [ ] Newsletter service provider choice
 - [ ] Signed copies shop link
 - [ ] Professional headshots — using Pic_of_Me.jpg as placeholder
+- [ ] Logo background cleanup — pending from Molly
 
 ### Resolved (Client Feedback Round 1 & 2)
 - [x] Contact email — set to elliehallaron.author@gmail.com
@@ -40,6 +42,8 @@
 - [x] Book order corrected (II, DD, VV, AA)
 - [x] Per-book labels (data-driven "label" field in books.json)
 - [x] Social media handles confirmed
+- [x] Home page featured books reduced to 2 (Vengeful Vows + Angelic Acts only) via show_on_home field
+- [x] Higher-quality cover images for Deceptive Desires and Angelic Acts
 
 ## Design Decisions
 
@@ -86,7 +90,7 @@ Changes made based on client review:
 - **Book cover spacing** increased significantly (4-col grid with 3.5rem gap)
 - **Nav logo**: Replaced text with signature PNG image (nav-signature.png)
 - **Hero**: Added conditional for watercolor logo (hero.watercolor field in hero.json); falls back to existing logo
-- **New cover images** copied: deceptive-desires.jpg, vengeful-vows.jpg, angelic-acts.jpg (from client-provided files)
+- **New cover images** copied: deceptive-desires.jpg, vengeful-vows.jpg, angelic-acts.jpg (from client-provided files; DD and AA updated again in Session 7 with higher-res versions)
 - **Books page**: Title → "Ellie Hallaron's Books", subtitle → "Romances that'll make you swoon", added series heading "The Syndicate Series" within grid section, layout structured for future series
 - **Shop page**: Banner heading → "Shop", sub → "Where to Buy"
 - **Connect page**: Heading → "Connect with Ellie", removed "Follow Along" and "Get in Touch" section labels
@@ -94,3 +98,10 @@ Changes made based on client review:
 - **Newsletter**: Heading changed to "Ellie's Newsletter", removed "Stay Connected" label, removed "unhinged" from description, fixed double period
 - **Amazon author URL**: Set to placeholder with TODO
 - **series.json**: book_slugs order updated to match new book order
+
+### 2026-03-16 — Session 7: Client Feedback Round 2
+Changes made based on client review:
+- **Home page featured books**: Reduced from 4 to 2 — only Vengeful Vows (New Release) and Angelic Acts (Coming Soon) shown via `show_on_home` field in books.json
+- **Featured grid layout**: Changed to 2-column with generous spacing (5rem gap, 600px max-width), centered
+- **Cover images upgraded**: Deceptive Desires (7MB) and Angelic Acts (6.3MB) replaced with higher-quality versions from client
+- All 4 books still appear on Books page, Shop page, and detail pages
