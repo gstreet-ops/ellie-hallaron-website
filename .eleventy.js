@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
 
   // --- Custom filters ---
 
@@ -24,7 +25,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["njk", "md"],
     htmlTemplateEngine: "njk",
-    // Change to "/" when custom domain (elliehallaron.com) is configured
-    pathPrefix: "/ellie-hallaron-website/",
+    pathPrefix: "/",
   };
 };
