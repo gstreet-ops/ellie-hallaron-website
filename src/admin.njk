@@ -1,0 +1,169 @@
+---
+layout: layouts/base.njk
+pageKey: admin
+---
+
+{% block extraHead %}
+<meta name="robots" content="noindex, nofollow">
+<style>
+  .admin-banner {
+    background: var(--deep-plum);
+    color: var(--cream);
+    text-align: center;
+    padding: 6rem 1.5rem 3rem;
+  }
+  .admin-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .admin-banner p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    opacity: 0.7;
+  }
+  .admin-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+  }
+  .admin-card {
+    background: var(--white);
+    border: 1px solid var(--gold-light);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .admin-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--deep-plum);
+    margin-bottom: 0.4rem;
+  }
+  .admin-card p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.92rem;
+    color: var(--charcoal);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .admin-card .tip {
+    font-size: 0.84rem;
+    color: #888;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .admin-btn {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    background: var(--magenta);
+    color: var(--white);
+    transition: opacity 0.2s;
+  }
+  .admin-btn:hover {
+    opacity: 0.85;
+  }
+  .admin-howto {
+    background: var(--blush);
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .admin-howto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--deep-plum);
+    margin-bottom: 0.75rem;
+  }
+  .admin-howto ol {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.92rem;
+    color: var(--charcoal);
+    line-height: 1.7;
+    padding-left: 1.25rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="admin-banner">
+  <h1>Site Admin</h1>
+  <p>Edit site content directly on GitHub. Changes go live in about a minute.</p>
+</section>
+
+<section class="admin-section">
+
+  <div class="admin-howto">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Click an <strong>Edit</strong> button below to open the file on GitHub.</li>
+      <li>GitHub shows the file content. Find the text you want to change.</li>
+      <li>Only change the text <strong>between the quote marks</strong> (<code>"like this"</code>).</li>
+      <li>Click the green <strong>Commit changes</strong> button at the top right.</li>
+      <li>The site rebuilds automatically. Your changes appear in about 1 minute.</li>
+    </ol>
+  </div>
+
+  <!-- Books -->
+  <div class="admin-card">
+    <h2>Books</h2>
+    <p>Edit book titles, blurbs, status, purchase links, content warnings, and the "Coming Soon" / "New Release" labels.</p>
+    <div class="tip">
+      To mark a book as released: change <code>"status": "coming_soon"</code> to <code>"status": "published"</code> and update the <code>"label"</code> field.<br>
+      To change the home page display: set <code>"show_on_home": true</code> or <code>false</code>.
+    </div>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/books.json" target="_blank" rel="noopener">Edit Books</a>
+  </div>
+
+  <!-- Bio -->
+  <div class="admin-card">
+    <h2>Author Bio</h2>
+    <p>Update bio paragraphs and photo reference on the About page.</p>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/bio.json" target="_blank" rel="noopener">Edit Bio</a>
+  </div>
+
+  <!-- Site Info -->
+  <div class="admin-card">
+    <h2>Site Info</h2>
+    <p>Change the site title, tagline, description, contact email, or copyright year.</p>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/site.json" target="_blank" rel="noopener">Edit Site Info</a>
+  </div>
+
+  <!-- Social Links -->
+  <div class="admin-card">
+    <h2>Social Links</h2>
+    <p>Add, remove, or update social media profiles shown on the Connect page.</p>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/social.json" target="_blank" rel="noopener">Edit Social Links</a>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="admin-card">
+    <h2>Newsletter</h2>
+    <p>Edit newsletter text, CTA button label, and signup URL.</p>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/newsletter.json" target="_blank" rel="noopener">Edit Newsletter</a>
+  </div>
+
+  <!-- Navigation -->
+  <div class="admin-card">
+    <h2>Navigation</h2>
+    <p>Change the nav menu labels or reorder links.</p>
+    <div class="tip">Be careful here — changing a <code>"url"</code> value can break links.</div>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/nav.json" target="_blank" rel="noopener">Edit Navigation</a>
+  </div>
+
+  <!-- Page Meta -->
+  <div class="admin-card">
+    <h2>Page Titles &amp; Descriptions</h2>
+    <p>Update the title, meta description, and banner text for each page.</p>
+    <a class="admin-btn" href="https://github.com/gstreet-ops/ellie-hallaron-content/edit/main/pagesMeta.json" target="_blank" rel="noopener">Edit Page Meta</a>
+  </div>
+
+</section>
+{% endblock %}

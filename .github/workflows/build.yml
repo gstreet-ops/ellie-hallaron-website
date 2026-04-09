@@ -3,6 +3,8 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  repository_dispatch:
+    types: [content-updated]
   workflow_dispatch:
 
 permissions:
@@ -24,6 +26,11 @@ jobs:
         with:
           node-version: 20
           cache: npm
+
+      - name: Fetch content data
+        run: |
+          git clone https://github.com/gstreet-ops/ellie-hallaron-content.git /tmp/content
+          cp /tmp/content/*.json src/_data/
 
       - run: npm ci
 
